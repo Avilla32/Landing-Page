@@ -21,3 +21,4 @@ let navItem = document.createElement("LI");                 // Create a <li> nod
 let navText = document.createTextNode(getSectionNames([]));         // Create a text node
 navItem.appendChild(navText);                              // Append the text to <li>
 document.getElementById("navbar__list").appendChild(navItem);     // Append <li> to <ul> with id="navbar__list" 
+*/
