@@ -6,6 +6,7 @@ document.createElement('li')
 // gets name of sections on page
 function getSectionNames() {
     let i = 0;
+    let sectionName = [];
     const sectionNames = document.querySelectorAll('section');
     for (i = 0; i < sectionNames.length; i++) {
        const sectionName = [sectionNames[i].getAttribute('id')];
