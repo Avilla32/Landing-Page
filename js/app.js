@@ -25,7 +25,7 @@ function createNavBar() {
         navLink.appendChild(navText);
         navItem.classList.add('menu__link');
         navLink.setAttribute("href", '#' + items[i]);
-        navLink.setAttribute("id", + 'nav' items[i]);
+        navLink.setAttribute("id", 'nav' + items[i]);
         document.getElementById("navbar__list").appendChild(navItem);
     }
 }
