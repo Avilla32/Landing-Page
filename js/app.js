@@ -27,10 +27,14 @@ document.getElementById("navbar__list").appendChild(navItem);     // Append <li>
 
 function createNavBar() {
     let i = 0;
-    for (i = 0; i < sectionName.length; i++) {
+    const navItems = document.querySelectorAll('section');
+
+    for (i = 0; i < navItems.length; i++) {
+            let items = getSectionNames();
         let navItem = document.createElement("LI"); // Create a <li> node
-        let navText = document.createTextNode(getSectionNames([i])); // Create a text node
+        let navText = document.createTextNode(items[i]); // Create a text node
         navItem.appendChild(navText); // Append the text to <li>
         document.getElementById("navbar__list").appendChild(navItem);
     }
 }
+createNavBar();
