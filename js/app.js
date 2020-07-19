@@ -42,22 +42,21 @@ function isInViewport(el) {
     );
 }
 
+let i = 0;
+const sections = document.querySelectorAll('section');
+for (i = 0; i < sections.length; i++) {
+    let section = getSectionNames();
+    const box = document.querySelector('#' + section);
+    document.addEventListener('scroll', function () {
 
-let sections = getSectionNames();
-const box = document.querySelector('#' + sections);
+        if (isInViewport(box)) {
+            box.classList.add('your-active-class')
 
-document.addEventListener('scroll', function () {
-    const messageText = isInViewport(box) ?
-        'The box is visible in the viewport' :
-        'The box is not visible in the viewport';
+        } else {
+            box.classList.remove('your-active-class')
+        }
 
-    if (isInViewport(box)) {
-        box.classList.add('your-active-class')
-        
-    } else {
-        box.classList.remove('your-active-class')
-    }
-
-}, {
-    passive: true
-});
+    }, {
+        passive: true
+    });
+}
