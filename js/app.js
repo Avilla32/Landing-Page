@@ -44,9 +44,8 @@ function isInViewport(el) {
 
 
 let sections = getSectionNames();
-
+for (i = 0; i < navItems.length; i++) {
 const box = document.querySelector('#' + sections);
-const message = document.querySelector('#navbar__list');
 
 document.addEventListener('scroll', function () {
     const messageText = isInViewport(box) ?
@@ -60,6 +59,6 @@ document.addEventListener('scroll', function () {
         box.classList.remove('your-active-class')
     }
 
-}, {
+}}, {
     passive: true
 });
