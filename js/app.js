@@ -45,22 +45,21 @@ function isInViewport(el) {
 
 let sections = getSectionNames();
 
-for (i = 0; i < sections.length; i++) {
-    const box = document.querySelector('#' + sections[i]);
+const box = document.querySelector('#' + sections);
+const message = document.querySelector('#navbar__list');
 
-    document.addEventListener('scroll', function () {
-            const messageText = isInViewport(box) ?
-                'The box is visible in the viewport' :
-                'The box is not visible in the viewport';
+document.addEventListener('scroll', function () {
+    const messageText = isInViewport(box) ?
+        'The box is visible in the viewport' :
+        'The box is not visible in the viewport';
 
-            if (isInViewport(box)) {
-                box.classList.add('your-active-class')
-
-            } else {
-                box.classList.remove('your-active-class')
-            }
-        }
+    if (isInViewport(box)) {
+        box.classList.add('your-active-class')
+        
+    } else {
+        box.classList.remove('your-active-class')
     }
+
 }, {
     passive: true
 });
