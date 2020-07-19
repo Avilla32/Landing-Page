@@ -10,8 +10,7 @@ function getSectionNames() {
     const sectionNames = document.querySelectorAll('section');
     for (i = 0; i < sectionNames.length; i++) {
         sectionName.push([sectionNames[i].getAttribute('id')]);
-        console.log(sectionName);
-        
+
     }
     return sectionName
 }
@@ -25,3 +24,13 @@ let navText = document.createTextNode(getSectionNames([]));         // Create a 
 navItem.appendChild(navText);                              // Append the text to <li>
 document.getElementById("navbar__list").appendChild(navItem);     // Append <li> to <ul> with id="navbar__list" 
 */
+
+function createNavBar() {
+    let i = 0;
+    for (i = 0; i < sectionName.length; i++) {
+        let navItem = document.createElement("LI"); // Create a <li> node
+        let navText = document.createTextNode(getSectionNames([i])); // Create a text node
+        navItem.appendChild(navText); // Append the text to <li>
+        document.getElementById("navbar__list").appendChild(navItem);
+    }
+}
