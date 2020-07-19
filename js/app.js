@@ -10,6 +10,7 @@ function getSectionNames() {
     for (i = 0; i < sectionNames.length; i++) {
        let sectionName = sectionNames[i].getAttribute('id');
         console.log(sectionName);
+        return;
     }
 }
 
