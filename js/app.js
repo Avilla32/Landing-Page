@@ -52,7 +52,7 @@ document.addEventListener('scroll', function () {
         'The box is not visible in the viewport';
 
     if (isInViewport(box)) {
-        section.classList.add('wow')
+        box.classList.add('wow')
         
     } else {
         
