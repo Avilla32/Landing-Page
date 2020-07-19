@@ -19,9 +19,10 @@ function createNavBar() {
         let items = getSectionNames();
         let navLink = document.createElement("A")
         let navItem = document.createElement("LI"); // Create a <li> node
-        let navText = document.createTextNode(items[i]); // Create a text node
+        let navText = document.createTextNode(items[i]);
+        let upperText = navText.toUpperCase(); // Create a text node
         navItem.appendChild(navLink); // Append the link to <li>
-        navLink.appendChild(navText);
+        navLink.appendChild(upperText);
         navItem.classList.add('menu__link');
         navLink.setAttribute("href", '#' + items[i]);
         document.getElementById("navbar__list").appendChild(navItem);
