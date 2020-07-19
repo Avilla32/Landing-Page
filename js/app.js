@@ -59,6 +59,6 @@ document.addEventListener('scroll', function () {
         box.classList.remove('your-active-class')
     }
 
-}}, {
+}, {
     passive: true
-});
+}});
