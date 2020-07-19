@@ -10,8 +10,8 @@ function getSectionNames() {
     for (i = 0; i < sectionNames.length; i++) {
        const sectionName = [sectionNames[i].getAttribute('id')];
         console.log(sectionName);
-        return sectionName;
     }
+    return sectionName;
 }
 
 // calls the function to get sections on page
