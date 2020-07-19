@@ -23,8 +23,36 @@ function createNavBar() {
         navItem.appendChild(navLink); // Append the link to <li>
         navLink.appendChild(navText);
         navItem.classList.add('menu__link');
-        navLink.setAttribute("href", '#'+ items[i]);
+        navLink.setAttribute("href", '#' + items[i]);
         document.getElementById("navbar__list").appendChild(navItem);
     }
 }
 createNavBar();
+
+
+// sees which section is in view
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+    );
+}
+
+
+const box = document.querySelector('#section1');
+const message = document.querySelector('#navbar__list');
+
+document.addEventListener('scroll', function () {
+    const messageText = isInViewport(box) ?
+        'The box is visible in the viewport' :
+        'The box is not visible in the viewport';
+
+    console.log(messageText);
+
+}, {
+    passive: true
+});
