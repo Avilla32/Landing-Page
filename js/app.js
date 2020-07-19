@@ -44,7 +44,6 @@ function isInViewport(el) {
 
 
 let sections = getSectionNames();
-for (i = 0; i < navItems.length; i++) {
 const box = document.querySelector('#' + sections);
 
 document.addEventListener('scroll', function () {
