@@ -30,7 +30,7 @@ body {
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     margin: 2em 1rem;
 }
 
@@ -44,7 +44,7 @@ h1 {
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
+    font-size: 2em;
     color: #fff;
 }
 
