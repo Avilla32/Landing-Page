@@ -16,11 +16,15 @@ function createNavBar() {
     const navItems = document.querySelectorAll('section');
 
     for (i = 0; i < navItems.length; i++) {
-            let items = getSectionNames();
+        let items = getSectionNames();
         let navItem = document.createElement("LI"); // Create a <li> node
         let navText = document.createTextNode(items[i]); // Create a text node
         navItem.appendChild(navText); // Append the text to <li>
+        navItem.classList.add('menu__link');
         document.getElementById("navbar__list").appendChild(navItem);
     }
 }
 createNavBar();
+
+
+//menu__link
