@@ -23,6 +23,7 @@ function createNavBar() {
         navItem.appendChild(navLink); // Append the link to <li>
         navLink.appendChild(navText);
         navItem.classList.add('menu__link');
+        navLink.setAttribute("href", '#'+ items[i]);
         document.getElementById("navbar__list").appendChild(navItem);
     }
 }
