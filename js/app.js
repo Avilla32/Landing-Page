@@ -60,6 +60,7 @@ for (i = 0; i < sections.length; i++) {
                 box.classList.remove('your-active-class')
             }
         }
-    }, {
-        passive: true
-    });
+    }
+}, {
+    passive: true
+});
