@@ -10,7 +10,6 @@ function getSectionNames() {
     for (i = 0; i < sectionNames.length; i++) {
        let sectionName = sectionNames[i].getAttribute('id');
         console.log(sectionName);
-        return;
     }
 }
 
@@ -20,4 +19,4 @@ getSectionNames()
 const navItem = document.createElement("LI");                 // Create a <li> node
 const navText = document.createTextNode(getSectionNames([]));         // Create a text node
 navItem.appendChild(navText);                              // Append the text to <li>
-document.getElementById("navbar__list").appendChild(navItem);     // Append <li> to <ul> with id="myList" 
+document.getElementById("navbar__list").appendChild(navItem);     // Append <li> to <ul> with id="navbar__list" 
