@@ -54,10 +54,12 @@ for (i = 0; i < sections.length; i++) {
     document.addEventListener('scroll', function () {
 
         if (isInViewport(box)) {
-            box.classList.add('your-active-class')
+            box.classList.add('your-active-class');
+            navSelector.classList.add('your-active-class');
 
         } else {
-            box.classList.remove('your-active-class')
+            box.classList.remove('your-active-class');
+            navSelector.classList.remove('your-active-class');
         }
 
     }, {
