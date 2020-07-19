@@ -28,11 +28,3 @@ function createNavBar() {
     }
 }
 createNavBar();
-
-
-//menu__link
-
-function makelink() {
-  var li = document.getElementsByClassName('menu__link')[0];
-  li.innerHTML = '<a href="#hOME">HTML</a>';
-}
