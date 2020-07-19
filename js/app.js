@@ -11,6 +11,7 @@ function getSectionNames() {
 }
 
 //creates navBar
+
 function createNavBar() {
     let i = 0;
     const navItems = document.querySelectorAll('section');
@@ -24,13 +25,15 @@ function createNavBar() {
         navLink.appendChild(navText);
         navItem.classList.add('menu__link');
         navLink.setAttribute("href", '#' + items[i]);
+        navLink.setAttribute("id", '#' + items[i]);
         document.getElementById("navbar__list").appendChild(navItem);
     }
 }
 createNavBar();
 
 
-// sees which section is in view
+// sees which section is in view and activates class
+
 function isInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
