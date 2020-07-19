@@ -43,7 +43,7 @@ function isInViewport(el) {
 }
 
 
-const box = document.querySelector('#section1');
+const box = document.querySelector('#Section 1');
 const message = document.querySelector('#navbar__list');
 
 document.addEventListener('scroll', function () {
