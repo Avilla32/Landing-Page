@@ -43,21 +43,23 @@ function isInViewport(el) {
 }
 
 
-const box = document.querySelector('#Section1');
-const message = document.querySelector('#navbar__list');
+let sections = getSectionNames();
 
-document.addEventListener('scroll', function () {
-    const messageText = isInViewport(box) ?
-        'The box is visible in the viewport' :
-        'The box is not visible in the viewport';
+for (i = 0; i < sections.length; i++) {
+    const box = document.querySelector('#' + sections[i]);
 
-    if (isInViewport(box)) {
-        box.classList.add('your-active-class')
-        
-    } else {
-        box.classList.remove('your-active-class')
-    }
+    document.addEventListener('scroll', function () {
+            const messageText = isInViewport(box) ?
+                'The box is visible in the viewport' :
+                'The box is not visible in the viewport';
 
-}, {
-    passive: true
-});
+            if (isInViewport(box)) {
+                box.classList.add('your-active-class')
+
+            } else {
+                box.classList.remove('your-active-class')
+            }
+        }
+    }, {
+        passive: true
+    });
