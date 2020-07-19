@@ -25,7 +25,7 @@ function createNavBar() {
         navLink.appendChild(navText);
         navItem.classList.add('menu__link');
         navLink.setAttribute("href", '#' + items[i]);
-        navLink.setAttribute("id", '#' + items[i]);
+        navLink.setAttribute("id", +'nav' items[i]);
         document.getElementById("navbar__list").appendChild(navItem);
     }
 }
@@ -50,7 +50,7 @@ const sections = document.querySelectorAll('section');
 for (i = 0; i < sections.length; i++) {
     let section = getSectionNames();
     const box = document.querySelector('#' + section[i]);
-    const navSelector = document.querySelector('##' + section[i]);
+    const navSelector = document.querySelector('#' + section[i]);
     document.addEventListener('scroll', function () {
 
         if (isInViewport(box)) {
