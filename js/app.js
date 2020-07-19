@@ -8,8 +8,8 @@ function getSectionNames() {
     let i = 0;
     const sectionNames = document.querySelectorAll('section');
     for (i = 0; i < sectionNames.length; i++) {
-       const sectionName[] = sectionNames[i].getAttribute('id');
-        console.log(sectionName[i]);
+       const sectionName = [sectionNames[i].getAttribute('id')];
+        console.log(sectionName);
     }
 }
 
