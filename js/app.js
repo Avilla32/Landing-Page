@@ -52,10 +52,10 @@ document.addEventListener('scroll', function () {
         'The box is not visible in the viewport';
 
     if (isInViewport(box)) {
-        box.classList.add('wow')
+        box.classList.add('your-active-class')
         
     } else {
-        
+        box.classList.remove('your-active-class')
     }
 
 }, {
