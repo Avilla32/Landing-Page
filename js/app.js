@@ -9,15 +9,15 @@ function getSectionNames() {
     let sectionName = [];
     const sectionNames = document.querySelectorAll('section');
     for (i = 0; i < sectionNames.length; i++) {
-       const sectionName = [sectionNames[i].getAttribute('id')];
+        sectionName.push([sectionNames[i].getAttribute('id')]);
         console.log(sectionName);
-        return sectionName;
+        
     }
-
+    return sectionName
 }
 
 // calls the function to get sections on page
-//getSectionNames()
+getSectionNames()
 
 /*
 let navItem = document.createElement("LI");                 // Create a <li> node
