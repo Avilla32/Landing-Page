@@ -55,11 +55,11 @@ for (i = 0; i < sections.length; i++) {
 
         if (isInViewport(box)) {
             box.classList.add('your-active-class');
-            navSelector.classList.add('your-active-class');
+            navSelector.classList.add('nav-active');
 
         } else {
             box.classList.remove('your-active-class');
-            navSelector.classList.remove('your-active-class');
+            navSelector.classList.remove('nav-active');
         }
 
     }, {
