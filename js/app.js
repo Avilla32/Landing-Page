@@ -51,7 +51,12 @@ document.addEventListener('scroll', function () {
         'The box is visible in the viewport' :
         'The box is not visible in the viewport';
 
-    console.log(messageText);
+    if (isInViewport(box)) {
+        section.classList.add('wow')
+        
+    } else {
+        
+    }
 
 }, {
     passive: true
