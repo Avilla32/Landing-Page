@@ -52,7 +52,7 @@ function isInViewport(el) {
 
 function activeState() {
     const sections = getSections();
-    document.addEventListener('scroll', function () {
+    document.addEventListener('scroll', function ()) {
             for (i = 0; i < sections.length; i++) {
                 let section = getSectionNames();
                 const box = document.querySelector('#' + section[i]);
