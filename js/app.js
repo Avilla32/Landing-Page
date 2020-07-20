@@ -1,7 +1,13 @@
+function getSections() {
+    const sections = document.querySelectorAll('section');
+    return sections;
+}
+
 // gets name of sections on page
 function getSectionNames() {
+    let i = 0;
     let sectionName = [];
-    const sectionNames = document.querySelectorAll('section');
+    const sectionNames = getSections();
     for (i = 0; i < sectionNames.length; i++) {
         sectionName.push([sectionNames[i].getAttribute('id')]);
 
@@ -9,10 +15,7 @@ function getSectionNames() {
     return sectionName
 }
 
-function getSections() {
-    const sections = document.querySelectorAll('section');
-    return sections;
-}
+
 
 //creates navBar
 
