@@ -5,7 +5,7 @@ function getSections() {
 
 // gets name of sections on page
 function getSectionNames() {
-    let i = 0;
+ 
     let sectionName = [];
     const sectionNames = getSections();
     for (i = 0; i < sectionNames.length; i++) {
@@ -14,8 +14,6 @@ function getSectionNames() {
     }
     return sectionName
 }
-
-
 
 //creates navBar
 
