@@ -50,8 +50,8 @@ function isInViewport(el) {
     );
 }
 
-let i = 0;
-const sections = document.querySelectorAll('section');
+
+
 for (i = 0; i < sections.length; i++) {
     let section = getSectionNames();
     const box = document.querySelector('#' + section[i]);
