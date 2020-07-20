@@ -10,16 +10,11 @@ function getSectionNames() {
     return sectionName
 }
 
-function getSections() {
-    const sections = document.querySelectorAll('section');
-    return sections;
-}
-
 //creates navBar
 
 function createNavBar() {
     let i = 0;
-    const navItems = getSections();
+    const navItems = document.querySelectorAll('section');
 
     for (i = 0; i < navItems.length; i++) {
         let items = getSectionNames();
@@ -35,3 +30,39 @@ function createNavBar() {
     }
 }
 createNavBar();
+
+
+// sees which section is in view and activates class
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+    );
+}
+
+let i = 0;
+const sections = document.querySelectorAll('section');
+for (i = 0; i < sections.length; i++) {
+    let section = getSectionNames();
+    const box = document.querySelector('#' + section[i]);
+    const navSelector = document.querySelector('#' + 'nav' + section[i]);
+    document.addEventListener('scroll', function () {
+
+        if (isInViewport(box)) {
+            box.classList.add('your-active-class');
+            navSelector.classList.add('nav-active');
+
+        } else {
+            box.classList.remove('your-active-class');
+            navSelector.classList.remove('nav-active');
+        }
+
+    }, {
+        passive: true
+    });
+}
