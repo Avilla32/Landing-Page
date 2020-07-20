@@ -10,11 +10,16 @@ function getSectionNames() {
     return sectionName
 }
 
+function getSections() {
+    const sections = document.querySelectorAll('section');
+    return sections;
+}
+
 //creates navBar
 
 function createNavBar() {
     let i = 0;
-    const navItems = document.querySelectorAll('section');
+    const navItems = getSections();
 
     for (i = 0; i < navItems.length; i++) {
         let items = getSectionNames();
