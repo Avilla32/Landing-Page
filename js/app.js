@@ -73,3 +73,4 @@ function activeState() {
         });
     }
 }
+activeState();
