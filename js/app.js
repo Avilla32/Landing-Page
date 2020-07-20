@@ -1,5 +1,6 @@
 // gets name of sections on page
 function getSectionNames() {
+    let i = 0;
     let sectionName = [];
     const sectionNames = document.querySelectorAll('section');
     for (i = 0; i < sectionNames.length; i++) {
@@ -17,6 +18,7 @@ function getSections() {
 //creates navBar
 
 function createNavBar() {
+    let i = 0;
     const navItems = getSections();
 
     for (i = 0; i < navItems.length; i++) {
