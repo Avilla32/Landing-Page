@@ -50,27 +50,29 @@ function isInViewport(el) {
     );
 }
 
+//highlights active state in viewport and nav
 
 function activeState() {
-    const sections = getSectionNames();
-    for (i = 0; i < sections.length; i++) {
-        let section = getSectionNames();
-        const box = document.querySelector('#' + section[i]);
-        const navSelector = document.querySelector('#' + 'nav' + section[i]);
-        document.addEventListener('scroll', function () {
+    const sections = getSections();
+    document.addEventListener('scroll', function () {
+            for (i = 0; i < sections.length; i++) {
+                let section = getSectionNames();
+                const box = document.querySelector('#' + section[i]);
+                const navSelector = document.querySelector('#' + 'nav' + section[i]);
 
-            if (isInViewport(box)) {
-                box.classList.add('your-active-class');
-                navSelector.classList.add('nav-active');
 
-            } else {
-                box.classList.remove('your-active-class');
-                navSelector.classList.remove('nav-active');
-            }
+                if (isInViewport(box)) {
+                    box.classList.add('your-active-class');
+                    navSelector.classList.add('nav-active');
 
-        }, {
-            passive: true
-        });
+                } else {
+                    box.classList.remove('your-active-class');
+                    navSelector.classList.remove('nav-active');
+                }
+
+            }}, {
+                passive: true
+            });
     }
 }
 activeState();
