@@ -68,7 +68,7 @@ function activeState() {
                     navSelector.classList.remove('nav-active');
                 }
 
-            }, {
+            } {
                 passive: true
             });
     }
