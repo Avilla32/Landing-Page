@@ -52,27 +52,39 @@ function isInViewport(el) {
 
 //highlights active state in viewport and nav
 
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+    );
+}
+
 function activeState() {
     const sections = getSections();
     document.addEventListener('scroll', function () {
-            for (i = 0; i < sections.length; i++) {
-                let section = getSectionNames();
-                const box = document.querySelector('#' + section[i]);
-                const navSelector = document.querySelector('#' + 'nav' + section[i]);
+        for (i = 0; i < sections.length; i++) {
+            let section = getSectionNames();
+            const box = document.querySelector('#' + section[i]);
+            const navSelector = document.querySelector('#' + 'nav' + section[i]);
 
 
-                if (isInViewport(box)) {
-                    box.classList.add('your-active-class');
-                    navSelector.classList.add('nav-active');
+            if (isInViewport(box)) {
+                box.classList.add('your-active-class');
+                navSelector.classList.add('nav-active');
 
-                } else {
-                    box.classList.remove('your-active-class');
-                    navSelector.classList.remove('nav-active');
-                }
+            } else {
+                box.classList.remove('your-active-class');
+                navSelector.classList.remove('nav-active');
+            }
 
-            }}, {
-                passive: true
-            });
-    }
+        }
+    }, {
+        passive: true
+    });
 }
 activeState();
