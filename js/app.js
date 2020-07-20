@@ -12,6 +12,7 @@ function getSectionNames() {
 
 function getSections() {
     const sections = document.querySelectorAll('section');
+    return sections;
 }
 
 //creates navBar
